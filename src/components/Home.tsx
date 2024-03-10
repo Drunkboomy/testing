@@ -19,6 +19,10 @@ const Home: React.FC = () => {
     setNewNoteText("Make a note.");
   };
 
+  const handleDeleteNote = (id: number) => {
+    setNotes(notes.filter((note) => note.id !== id));
+  };
+
   return (
     <div className="flex flex-col items-center">
       <button
@@ -35,7 +39,10 @@ const Home: React.FC = () => {
               <button className="mr-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                 Edit
               </button>
-              <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+              <button
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                onClick={() => handleDeleteNote(note.id)}
+              >
                 Delete
               </button>
             </div>
