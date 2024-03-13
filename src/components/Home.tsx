@@ -5,8 +5,9 @@ const Home: React.FC = () => {
   const [notes, setNotes] = useState<
     { id: number; heading: string; text: string }[]
   >([]);
-  const [newNoteHeading, setNewNoteHeading] = useState("Heading Goes Here");
-  const [newNoteText, setNewNoteText] = useState("Make a note.");
+  const [newNoteHeading, setNewNoteHeading] =
+    useState<string>("Heading Goes Here");
+  const [newNoteText, setNewNoteText] = useState<string>("Make a note.");
 
   const handleAddNote = () => {
     const newNote = {

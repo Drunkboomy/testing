@@ -10,7 +10,6 @@ const NavBar: React.FC<NavBarProps> = ({ name, imageSrc }) => {
   return (
     <nav className="flex items-center justify-between px-4 py-2 bg-blue-600 text-white">
       <div className="flex items-center">
-        {/* Wrap the image with Link component */}
         <Link to="/">
           <img className="mr-4 h-8" src={imageSrc} alt="Logo" />
         </Link>
